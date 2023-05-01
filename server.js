@@ -4,6 +4,7 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import connect from './config/db.js'
 import userRouter from "./router/userRouter.js"
+import cardRouter from "./router/cardRouter.js"
 
 
 
@@ -14,6 +15,7 @@ dotenv.config()
 app.use(cors())
 app.use(bodyParser.json());
 app.use('/user',userRouter)
+app.use('/card',cardRouter)
 
 connect();
 

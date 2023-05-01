@@ -1,6 +1,7 @@
 import express from "express";
-import Login from "../controller/auth/Login";
-import Register from "../controller/auth/Register";
+import { Login } from "../controller/auth/Login.js";
+import { Register } from "../controller/auth/Register.js";
+import {sendemail} from "../controller/sendEmail.js"
 const router = express.Router();
 
 
@@ -11,6 +12,7 @@ const router = express.Router();
 
 router.post("/register", Register)
 router.post("/login", Login)
+router.post('/sendEmail',sendemail)
 
 
 export default router;
