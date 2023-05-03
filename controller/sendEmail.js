@@ -26,7 +26,7 @@ export const sendemail = async (req, res) => {
         
           let info = await transporter.sendMail({
             from: '"Pet SHop" <khushijoshi1402@gmail.com>', // sender address
-            to: "atulbrar222@gmail.com", // list of receivers
+            to: "Joshikhushi78601@gmail.com", // list of receivers
             subject: "Contact form", // Subject line
             // text: "Hello world?", // plain text body
             text:`Name : ${fname}, Email : ${email} , Message: ${message}` ,  // html body
