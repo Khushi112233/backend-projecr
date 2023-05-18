@@ -21,7 +21,7 @@ export const Register = async (req, res) => {
             res.status(400).json({msg:"Something happining wrong"});
     } catch (error) {
         res.status(500).json({
-            error
+            msg:"Something went wrong"
         })
     }
 

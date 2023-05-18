@@ -14,9 +14,11 @@ export const Login = async (req, res) => {
         const response  = await User.findOne({email})
         if(response.password === password)
             res.status(200).json({msg:"User login successfull" , response})
+        else 
+            res.status(400).json({msg:"Password does't match"})
     } catch (error) {
         res.status(500).json({
-            error
+            msg:"User Cannot found"
         })
     }
 
